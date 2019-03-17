@@ -1,0 +1,5 @@
+
+Lsquid:S1068")Remove this unused "namme" private field.(ÌÙ¾µûÿÿÿÿ8¹üÚ˜-
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(´É¦üÿÿÿÿ
+Nsquid:S1068"+Remove this unused "surname" private field.(—‡¨åûÿÿÿÿ8¹üÚ˜-
+Jsquid:S1068"'Remove this unused "age" private field.(Æ†´¦şÿÿÿÿ8¼Ê„Ü˜-
