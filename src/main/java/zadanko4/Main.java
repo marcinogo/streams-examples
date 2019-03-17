@@ -21,7 +21,7 @@ class Main
       List<Person> people = new ArrayList<>();
      createPersonLit(people);
 
-     //wyświetl wszystkie zdobyte szczyty wszystkich osób jako płaska posortowaną listę
+//Wyświetl wszystkie szczyty jako Set<String>
 
       List<Set<String>> szczyty = people.stream()
             .map(Person::getZdobyteSzczyty)
@@ -29,6 +29,7 @@ class Main
 
       szczyty.forEach(System.out::println);
 
+     //wyświetl wszystkie zdobyte szczyty wszystkich osób jako płaską, posortowaną listę
       System.out.println("\nflatMap");
 
       List<String> szczytyFlatMap = people.stream()
