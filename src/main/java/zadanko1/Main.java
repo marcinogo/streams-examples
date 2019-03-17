@@ -7,16 +7,20 @@ import java.util.stream.Collectors;
 
 public class Main {
 
+
     public static void main(String[] args) {
+
         List<Book> library = new ArrayList<>();
         initializeLibrary(library);
 
+        System.out.println("ZADANIE 1: ");
         // 1. Wykorzystujac zrodlo, ktorym jest biblioteka (library ArrayList) wypisz tytuly ksiazek, ktore sa jednowyrazowe.
         library.stream()
                .map(Book::getTitle)
                .filter(title -> !title.contains(" "))
                .forEach(System.out::println);
 
+        System.out.println("\nZADANIE 2: ");
         // 2. Wykorzystujac zroldo, ktorym jest biblioteka (library ArrayList) zapisz nazwiska autorow, ktorzy maja wiecej niz 50 lat do nowej listy.
         List<String> authors = library.stream()
                                       .map(Book::getAuthor)
@@ -26,12 +30,6 @@ public class Main {
                                       .distinct()
                                       .collect(Collectors.toList());
         System.out.println(authors);
-        // 3. Wykorzystujac zrodlo, ktorym jest biblioteka (library ArrayList) zwroc sume wieku wszystkich autorow.
-        int authorsAge = library.stream()
-                                .map(Book::getAuthor)
-                                .map(Author::getAge)
-                                .reduce(0, Integer::sum);
-        System.out.println("Suma lat: " + authorsAge);
     }
 
     private static void initializeLibrary(List<Book> library) {
