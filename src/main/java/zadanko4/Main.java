@@ -13,15 +13,13 @@ import java.util.stream.Collectors;
 class Main
 {
 
-   static Function<String, String> mapowanie = nazwisko -> nazwisko.toUpperCase();
-
    public static void main(String[] args)
    {
 
       List<Person> people = new ArrayList<>();
-     createPersonLit(people);
+      createPersonLit(people);
 
-//Wyświetl wszystkie szczyty jako Set<String>
+      //Wyświetl wszystkie szczyty jako Set<String>
 
       List<Set<String>> szczyty = people.stream()
             .map(Person::getZdobyteSzczyty)
@@ -29,7 +27,7 @@ class Main
 
       szczyty.forEach(System.out::println);
 
-     //wyświetl wszystkie zdobyte szczyty wszystkich osób jako płaską, posortowaną listę
+      //wyświetl wszystkie zdobyte szczyty wszystkich osób jako płaską, posortowaną listę
       System.out.println("\nflatMap");
 
       List<String> szczytyFlatMap = people.stream()
@@ -58,7 +56,6 @@ class Main
       ania.setSzczyt("Smrek");
       Person tosia = new Person("Tosia", 4L);
       tosia.setSzczyt("Szczyt wszystkiego");
-
 
       people.add(tadek);
       people.add(marek);
