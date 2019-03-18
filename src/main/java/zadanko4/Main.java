@@ -13,11 +13,10 @@ class Main {
         List<Person> people = new ArrayList<>();
         createPersonLit(people);
 
-        //Wyświetl wszystkie szczyty jako Set<String>
+        //Wyświetl elementy kolekcji zawierajace szczyty bez uzywania flatMap i sprobuj postortowac. Co zaobserwujesz?
 
 
-        //wyświetl wszystkie zdobyte szczyty wszystkich osób jako płaską, posortowaną listę
-
+        //wyświetl wszystkie zdobyte szczyty wszystkich osób jako płaską, posortowaną listę (flatMap) i zaobserwuj roznice w wyniku
 
     }
 
