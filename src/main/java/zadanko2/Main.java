@@ -23,21 +23,11 @@ public class Main {
         }
 
         // 1. Wykorzystujac liste slow z pliku (listOfWords LinkedList) wypisz wyrazy, ktore zaczyaja sie na litere A
-        listOfWords.stream()
-                   .filter(s -> s.startsWith("A"))
-                   .forEach(System.out::println);
 
-        // 2. Wykorzystujac liste slow z pliku (listOfWords LinkedList) zwroc liczbe wszystkich slow, które mają w sobie ciag wyrazow "ona"
-        int wordSum = listOfWords.stream()
-                                 .filter(s -> s.contains("ona"))
-                                 .mapToInt(Integer::parseInt).sum();
-        System.out.println("Liczba slow zawierajacych 'ona' :" + wordSum);
+        // 2. Wykorzystujac liste slow z pliku (listOfWords LinkedList) zwroc najdluzsze slowo, ktore ma w sobie ciag wyrazow "ONA"
 
-        // 3. Wykorzystujac liste slow z pliku (listOfWords LinkedList) znajdz 15 pierwszych slow o dlugosci 3 znaki i wiecej
-        listOfWords.stream()
-                   .filter(s -> s.length() >= 3)
-                   .limit(15)
-                   .forEach(System.out::println);
+        // 3. Wykorzystujac liste slow z pliku (listOfWords LinkedList) znajdz 15 pierwszych slow o dlugosci 3 i wiecej
+
     }
 
 
