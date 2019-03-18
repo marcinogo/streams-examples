@@ -23,6 +23,13 @@ public class Main {
             }
         }
         // Przepisz powyzszy kod z wykorzystaniem strumieni.
+        showRoom.stream()
+                .filter(c -> c.getMake().equals("Ford"))
+                .filter(c -> c.getDoors() == 3)
+                .filter(c -> new BigDecimal(300000).compareTo(c.getPrice()) > 0)
+                .filter(c -> c.getPower() <= 100)
+                .map(c -> c.toString().toUpperCase())
+                .forEach(System.out::println);
 
     }
 

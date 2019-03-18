@@ -1,7 +1,10 @@
 package zadanko4;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * @author krzysztof.kramarz
@@ -13,10 +16,23 @@ class Main {
         List<Person> people = new ArrayList<>();
         createPersonLit(people);
 
-        //Wyświetl elementy kolekcji zawierajace szczyty bez uzywania flatMap i sprobuj postortowac. Co zaobserwujesz?
+        //Wyświetl wszystkie szczyty jako Set<String>
+        List<Set<String>> szczyty = people.stream()
+                                          .map(Person::getZdobyteSzczyty)
+                                          .collect(Collectors.toList());
+
+        szczyty.forEach(System.out::println);
 
 
-        //wyświetl wszystkie zdobyte szczyty wszystkich osób jako płaską, posortowaną listę (flatMap) i zaobserwuj roznice w wyniku
+        //wyświetl wszystkie zdobyte szczyty wszystkich osób jako płaską, posortowaną listę
+        System.out.println("\nflatMap");
+        List<String> szczytyFlatMap = people.stream()
+                                            .map(Person::getZdobyteSzczyty)
+                                            .flatMap(Collection::stream)
+                                            .sorted()
+                                            .collect(Collectors.toList());
+
+        szczytyFlatMap.forEach(System.out::println);
 
     }
 

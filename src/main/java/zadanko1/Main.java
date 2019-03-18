@@ -3,6 +3,7 @@ package zadanko1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -13,9 +14,23 @@ public class Main {
         initializeLibrary(library);
 
 
+        System.out.println("ZADANIE 1: ");
         // 1. Wykorzystujac zrodlo, ktorym jest biblioteka (library ArrayList) wypisz tytuly ksiazek, ktore sa jednowyrazowe.
+        library.stream()
+               .map(Book::getTitle)
+               .filter(title -> !title.contains(" "))
+               .forEach(System.out::println);
 
-        // 2. Wykorzystujac zroldo, ktorym jest biblioteka (library ArrayList) zapisz nazwiska autorow, ktorzy maja wiecej niz 50 lat do nowej listy. Nazwiska nie powinny sie powtarzac
+        System.out.println("\nZADANIE 2: ");
+        // 2. Wykorzystujac zroldo, ktorym jest biblioteka (library ArrayList) zapisz nazwiska autorow, ktorzy maja wiecej niz 50 lat do nowej listy.
+        List<String> authors = library.stream()
+                                      .map(Book::getAuthor)
+                                      .filter(author -> author.getAge() > 50)
+                                      .map(Author::getSurname)
+                                      .map(String::toUpperCase)
+                                      .distinct()
+                                      .collect(Collectors.toList());
+        System.out.println(authors);
     }
 
     private static void initializeLibrary(List<Book> library) {
