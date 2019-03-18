@@ -26,7 +26,7 @@ public class Main {
 
         // 2. Wykorzystujac liste slow z pliku (listOfWords LinkedList) wypisz najdluzsze slowo, ktore ma w sobie ciag znakow "ONA"
 
-        // 3. Wykorzystujac liste slow z pliku (listOfWords LinkedList) znajdz 15 pierwszych slow o dlugosci 3 i wiecej
+        // 3. Wykorzystujac liste slow z pliku (listOfWords LinkedList) znajdz 15 pierwszych slow o dlugosci 3 znaki i wiecej
 
     }
 

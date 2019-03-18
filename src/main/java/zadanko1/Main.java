@@ -12,11 +12,10 @@ public class Main {
         List<Book> library = new ArrayList<>();
         initializeLibrary(library);
 
+
         // 1. Wykorzystujac zrodlo, ktorym jest biblioteka (library ArrayList) wypisz tytuly ksiazek, ktore sa jednowyrazowe.
 
-
-        // 2. Wykorzystujac zroldo, ktorym jest biblioteka (library ArrayList) zapisz nazwiska autorow, ktorzy maja wiecej niz 50 lat do nowej listy. Nazwiska nie powinny sie powielac.
-
+        // 2. Wykorzystujac zroldo, ktorym jest biblioteka (library ArrayList) zapisz nazwiska autorow, ktorzy maja wiecej niz 50 lat do nowej listy. Nazwiska nie powinny sie powtarzac
     }
 
     private static void initializeLibrary(List<Book> library) {
