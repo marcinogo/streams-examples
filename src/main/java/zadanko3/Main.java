@@ -23,7 +23,14 @@ public class Main {
             }
         }
         // Przepisz powyzszy kod z wykorzystaniem strumieni.
-
+        showRoom.stream()
+                .filter(car -> car.getMake().equals("Ford"))
+                .filter(car -> car.getDoors() == 3)
+                .filter(car -> car.getPower() <= 100)
+                .filter(car -> new BigDecimal(30000)
+                .compareTo(car.getPrice()) > 0)
+                .map(car -> car.toString().toUpperCase())
+                .forEach(System.out::println);
     }
 
 
